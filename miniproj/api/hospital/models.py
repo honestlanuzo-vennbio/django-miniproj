@@ -1,10 +1,10 @@
 from django.db import models
-from mpapi import models as amodels
+from mpapi.models import AuditModel
 
 from miniproj.constants import Validators
 
 
-class Hospital(amodels.AuditModel):
+class Hospital(AuditModel):
     name = models.CharField(
         max_length=255, unique=True, validators=[Validators.alpha_only]
     )

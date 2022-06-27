@@ -1,11 +1,11 @@
 from django.db import models
-from mpapi import models as amodels
+from mpapi.models import AuditModel
 
 from miniproj.constants import Validators
 from miniproj.api.patient.models import Patient
 
 
-class Sample(amodels.AuditModel):
+class Sample(AuditModel):
     sample_id = models.CharField(
         max_length=255,
         unique=True,
